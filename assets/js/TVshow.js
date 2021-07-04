@@ -39,18 +39,18 @@ function getTVshowDetails(data){
                 </div>
                 <div class="details">
                     <ul class="list">
-                        <li class="item"><strong>Name:</strong> ${movie.original_name}</li>
-                        <li class="item"><strong>Genre:</strong> ${genresoutput}</li>
-                        <li class="item"><strong>Rated:</strong> ${movie.vote_average}</li>
-                        <li class="item"><strong>Episode:</strong> ${movie.number_of_episodes}</li>
-                        <li class="item"><strong>Season:</strong> ${movie.number_of_seasons}</li>
-                        <li class="item"><strong>Language:</strong> ${languageoutput}</li>
-                        <li class="item"><strong>Networks:</strong> ${networkoutput}</li>
+                        <li class="item"><strong>Name : </strong> ${movie.original_name}</li>
+                        <li class="item"><strong>Genre : </strong> ${genresoutput}</li>
+                        <li class="item"><strong>Rated : </strong> ${movie.vote_average}</li>
+                        <li class="item"><strong>Episode : </strong> ${movie.number_of_episodes}</li>
+                        <li class="item"><strong>Season : </strong> ${movie.number_of_seasons}</li>
+                        <li class="item"><strong>Language : </strong> ${languageoutput}</li>
+                        <li class="item"><strong>Networks : </strong> ${networkoutput}</li>
                     </ul>
                 </div>
             </div>
             <div class="box">
-                <h2>Overview</h2>
+                <h2>Overview : </h2>
                 <p>${movie.overview}</p>
                 <a href="index.html" style="background:green;" class="btn">Go Back To Search</a>
                 <div class="season_title">Season</div>
@@ -97,6 +97,7 @@ function getTVshowVideo(data){
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/${key}" title="${title}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             `;
         });
+        document.querySelector(".video_title").innerHTML = "VIDEO";
         document.getElementById("movie__video").innerHTML = output;
     })
 }

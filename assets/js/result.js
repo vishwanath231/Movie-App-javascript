@@ -1,24 +1,27 @@
+const Poster_URL = `https://image.tmdb.org/t/p/w500/`;
     
     var searchvalue = localStorage.getItem("searchValue");
 
-    
-    fetch(` http://www.omdbapi.com/?s=${searchvalue}&apikey=dda54285`)
+    var searchApi = `https://api.themoviedb.org/3/search/movie?api_key=0a6e02f4a23c2bedfd64e1ca9ccf492a&query=${searchvalue}`;
+    // var searchApi = `https://api.themoviedb.org/3/search/multi?api_key=0a6e02f4a23c2bedfd64e1ca9ccf492a&query=${searchvalue}`;
+
+    fetch(searchApi)
     .then((res) => res.json())
     .then((response)=> {
 
-        console.log(response);
         
-        let movies = response.Search;
+        let movies = response.results;
         let output = '';
         
         movies.forEach(movie => {
+             const Search_Poster = movie.poster_path;
             
             output += `
             <div class="movieBx space">
-                <a onclick="searchSelected('${movie.imdbID}')" class="movie_container" href="#">
-                    <img src="${movie.Poster}" alt="Poster">
+                <a onclick="searchSelected('${movie.id}')" class="movie_container" href="#">
+                    <img src="${Poster_URL + Search_Poster}" alt="Poster">
                 </a>
-                <div class="popular__names">${movie.Title}</div>
+                <div class="popular__names">${movie.original_title}</div>
             </div>
              
             `;
@@ -27,6 +30,31 @@
         
         
     })
+    // fetch(` http://www.omdbapi.com/?s=${searchvalue}&apikey=dda54285`)
+    // .then((res) => res.json())
+    // .then((response)=> {
+
+    //     console.log(response);
+        
+    //     let movies = response.Search;
+    //     let output = '';
+        
+    //     movies.forEach(movie => {
+            
+    //         output += `
+    //         <div class="movieBx space">
+    //             <a onclick="searchSelected('${movie.imdbID}')" class="movie_container" href="#">
+    //                 <img src="${movie.Poster}" alt="Poster">
+    //             </a>
+    //             <div class="popular__names">${movie.Title}</div>
+    //         </div>
+             
+    //         `;
+    //     });
+    //     document.getElementById("searchResult").innerHTML = output;
+        
+        
+    // })
 
 
 
@@ -49,21 +77,26 @@ function displayResult(e){
     localStorage.setItem("searchValue",filterName.value);
     var searchOutput = localStorage.getItem("searchValue")
 
-    fetch(` http://www.omdbapi.com/?s=${searchOutput}&apikey=dda54285`)
+    var searchApi = `https://api.themoviedb.org/3/search/movie?api_key=0a6e02f4a23c2bedfd64e1ca9ccf492a&query=${searchOutput}`;
+
+
+    fetch(searchApi)
     .then((res) => res.json())
     .then((response)=> {
-        
-        let movies = response.Search;
-        let output = '';
 
+        
+        let movies = response.results;
+        let output = '';
+        
         movies.forEach(movie => {
+             const Search_Poster = movie.poster_path;
             
             output += `
             <div class="movieBx space">
-                <a onclick="searchSelected('${movie.imdbID}')" class="movie_container" href="#">
-                    <img src="${movie.Poster}" alt="Poster">
+                <a onclick="searchSelected('${movie.id}')" class="movie_container" href="#">
+                    <img src="${Poster_URL + Search_Poster}" alt="Poster">
                 </a>
-                <div class="popular__names">${movie.Title}</div>
+                <div class="popular__names">${movie.original_title}</div>
             </div>
              
             `;
@@ -71,6 +104,7 @@ function displayResult(e){
         document.getElementById("searchResult").innerHTML = output;
         
         filterName.value = "";
+        
     })
 }
 
@@ -79,3 +113,23 @@ if (localStorage.getItem("userName")) {
         document.querySelector('.user__name').innerText = localStorage.getItem("userName");  
     }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    

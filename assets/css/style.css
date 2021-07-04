@@ -34,7 +34,7 @@ body{
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 99;
+    z-index: 9999;
 }
 .flex__container{
     display: flex;
@@ -55,28 +55,30 @@ body{
     align-items: center;
 }
 .user__name{
-    background-color: lightblue;
     text-align: center;
     line-height: 30px;
     font-size: 16px;
     font-weight: 500;
-    padding: 5px;
+    padding: 2px 5px;
     border-radius: 3px;
     cursor: pointer;
     text-decoration: none;
     color: #000;
 }
+
 .flex__container .login form input {
     padding: 7px 10px;
     outline: none;
     font-family: "poppins",sans-serif;
-    width: 250px;
+    width: 260px;
     font-size: 15px;
     font-weight: 500;
+    letter-spacing: 0.3px;
     background: transparent;
     border: none;
     color: aliceblue;
-    border-bottom: 2px solid #fff;
+    border: 2px solid #1f263a;
+    border-radius: 30px;
 }
 .flex__container .login .login__btn {
     background-color: lightblue;
@@ -84,14 +86,14 @@ body{
     line-height: 30px;
     font-size: 16px;
     font-weight: 500;
-    padding: 5px;
+    padding: 2px 5px;
     border-radius: 3px;
     cursor: pointer;
     text-decoration: none;
     color: #000;
     margin-top: 0px;
+    margin-left: 8px;
 }
-
 
 
 /*------------------------
@@ -100,13 +102,15 @@ body{
 .header{
     background-image: url('../img/bg.jpg');
     width: 100%;
-    height: 52vh;
-    background-position: center;
+    height: auto;
+    background-size: 100% 100%;
+    background-position:center;
     background-size: cover;
     background-repeat: no-repeat;
     position:relative;
     z-index: 999;
-    margin-top: 3.90rem;
+    margin-top: 3rem;
+    background-position-y: 0;
 }
 .header::after{
     content: '';
@@ -138,6 +142,10 @@ body{
     display: flex;
     background-color: #fff;
     border-radius: 30px;
+    margin: 0;
+}
+.content .form:hover{
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
 }
 .content .form input{
     font-family: "poppins",sans-serif;
@@ -147,8 +155,9 @@ body{
     font-size: 16px;
     font-weight: 500;
     border-radius: 30px;
-    margin-left: 16px;
-    padding: 12px;
+    padding:12px 12px;
+    margin-left: 10px;
+    text-transform: capitalize;
 }
 .content .form button{
     font-family: "poppins",sans-serif;
@@ -161,13 +170,13 @@ body{
     border-radius: 30px;
     cursor: pointer;
 }
+
 @media(max-width:768px){
-    .content{
-        text-align: center;
-    }
+   
     .content h1 {
         font-size: 34px;
         font-weight: 700;
+        margin-bottom: .5rem;
     }
     .content p {
         font-size: 18px;
@@ -176,7 +185,20 @@ body{
     .content .form{
         width: 100%;
     }
+    .content .form input{
+        padding: 12px 2px;
+    }
+   
+    .flex__container {
+        margin: 0 .8rem;
+    }
 }
+@media(max-width:475px){
+    .flex__container {
+        margin: 0 .5rem;
+    }
+}
+
 
 
 /*-----------------------------
@@ -385,4 +407,11 @@ body{
     font-weight: 500;
     cursor: pointer;
     text-align: center;
+}
+
+@media(max-width:375px) {
+    .login__box{
+        width: 330px;
+        padding: 1rem;
+    }
 }

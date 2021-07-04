@@ -20,9 +20,9 @@ getMovieDetails(Popular_URL)
                     <div class="details">
                         <h2 style="color:#fff;margin-bottom:1rem;">${populars.name}</h2>
                         <ul class="list">
-                            <li class="item"><strong>Birthday:</strong> ${populars.birthday}</li>
-                            <li class="item"><strong>Place of Birth:</strong> ${populars.place_of_birth}</li>
-                            <li class="item"><strong>Biography:</strong> ${populars.biography}</li>
+                            <li class="item"><strong>Birthday : </strong> ${populars.birthday}</li>
+                            <li class="item"><strong>Place of Birth : </strong> ${populars.place_of_birth}</li>
+                            <li class="item"><strong>Biography : </strong> ${populars.biography}</li>
                         </ul>
                     </div>
                 </div>

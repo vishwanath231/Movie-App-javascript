@@ -57,12 +57,15 @@ body {
    font-weight: 700;
    letter-spacing: 0.3px;
    color: #fff;
-   margin-top: 2rem;
+   margin: 2rem 0 2rem 0;
 }
 .flex{
     display: flex;
     flex-wrap: wrap;
     margin-top: 1rem;
+}
+.poster{
+    padding: 10px 0;
 }
 .poster img{
     width: 220px;
@@ -73,6 +76,9 @@ body {
     margin-right: 20px;
     object-fit: cover;
 }
+.details{
+    padding: 20px 0 0 0;
+}
 
 .details .list{
     list-style: none;
@@ -82,15 +88,20 @@ body {
     color: #fff;
 }
 strong{
-    color: #3d5af1;
+    /* color: #22d1ee; */
+    /* color: #3d5af1; */
+    color: crimson;
 }
 .box h2{
-    color: #3d5af1;
+    color:crimson;
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 0.3rem;
 }
 .box p{
     width: 100%;
     color: #fff;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
 }
 .box a{
     padding: 12px 16px;
@@ -98,7 +109,7 @@ strong{
     font-weight: 500;
     text-decoration: none;
     color: #fff;
-    background-color: crimson;
+    background-color: #1f4287;
     border-radius: 3px;
 }
 .box a:nth-child(even){
@@ -106,7 +117,7 @@ strong{
 }
 
 .season_title {
-    margin: 20px 0 0px 0;
+    margin: 3rem 0 30px 0;
     font-size: 30px;
     font-weight: 700;
     color: #fff;
@@ -144,7 +155,15 @@ strong{
    color: #fff;
    text-align: center;
    text-transform: uppercase;
-    margin: 30px 0;
+    margin: 3rem 0 30px 0;
+}
+.container .video_title{
+    font-size: 30px;
+    font-weight: 700;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 3rem 0 30px 0;
 }
 #movie__video,
 #trending__video {

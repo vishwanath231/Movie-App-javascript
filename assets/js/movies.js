@@ -35,17 +35,17 @@ function getMovieDetails(data){
                 </div>
                 <div class="details">
                     <ul class="list">
-                        <li class="item"><strong>Name:</strong> ${movie.original_title}</li>
-                        <li class="item"><strong>Genre:</strong> ${genresoutput}</li>
-                        <li class="item"><strong>Released:</strong> ${movie.release_date}</li>
-                        <li class="item"><strong>Rated:</strong> ${movie.vote_average}</li>
-                        <li class="item"><strong>Language:</strong> ${languageoutput}</li>
-                        <li class="item"><strong>Run Time:</strong> ${movie.runtime}</li>
+                        <li class="item"><strong>Name : </strong> ${movie.original_title}</li>
+                        <li class="item"><strong>Genre : </strong> ${genresoutput}</li>
+                        <li class="item"><strong>Released : </strong> ${movie.release_date}</li>
+                        <li class="item"><strong>Rated : </strong> ${movie.vote_average}</li>
+                        <li class="item"><strong>Language : </strong> ${languageoutput}</li>
+                        <li class="item"><strong>Run Time : </strong> ${movie.runtime}</li>
                     </ul>
                 </div>
             </div>
             <div class="box">
-                <h2>Overview</h2>
+                <h2>Overview :</h2>
                 <p>${movie.overview}</p>
                 <a href="http://imdb.com/title/${movie.imdb_id}" target="_blank" class="btn">View IMDB</a>
                 <a href="index.html" class="btn">Go Back To Search</a>
@@ -74,6 +74,7 @@ function getMovieVideo(data){
               <iframe width="560" height="315" src="https://www.youtube.com/embed/${key}" title="${title}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             `;
         });
+        document.querySelector(".video_title").innerHTML = "VIDEO";
         document.getElementById("movie__video").innerHTML = output;
     })
 }

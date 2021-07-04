@@ -9,6 +9,10 @@ function displayValue(e){
 
     var filterName = document.getElementById("filter");
 
+
+
+    
+
     localStorage.setItem("searchValue",filterName.value);
 
     window.location = 'searchResult.html';
@@ -24,8 +28,8 @@ const Popular_Movie = `${Base_URL}popular?${API}&page=1`;
 const Upcoming_Movie = `${Base_URL}upcoming?${API}&page=1`;
 const Poster_URL = `https://image.tmdb.org/t/p/w500/`;
 const Trending_All_URL = `https://api.themoviedb.org/3/trending/all/day?${API}`;
-const Popular_TV_Shows = `https://api.themoviedb.org/3/tv/popular?${API}&language=en-US&page=1`;
-const Popular = `https://api.themoviedb.org/3/person/popular?${API}&language=en-US&page=1`;
+const Popular_TV_Shows = `https://api.themoviedb.org/3/tv/popular?${API}&page=1`;
+const Popular = `https://api.themoviedb.org/3/person/popular?${API}&page=1`;
 const Trending = `https://api.themoviedb.org/3/trending/all/day?${API}`;
 
 
@@ -220,6 +224,7 @@ function login(){
     if (localStorage.getItem("userName")) {
         document.querySelector(".login__btn").style.display = "none";
         document.querySelector('.user__name').innerText = localStorage.getItem("userName");  
+        document.querySelector(".user__name").style.backgroundColor= "lightblue";
     }
 }
 login();
@@ -244,12 +249,15 @@ function logout(){
 }
 
 
+
 var loginFormSubmit = document.getElementById("loginFormSubmit");
 loginFormSubmit.addEventListener("submit", (e)=> {
     e.preventDefault();
 
     var LoginOpen = document.querySelector(".login__container");
     LoginOpen.classList.toggle("active")
+
+    
 
     location.reload();
     document.querySelector(".user__name").style.display = "block";
