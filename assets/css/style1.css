@@ -1,0 +1,165 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "poppins", sans-serif;
+    /* background-color: #1A1A1D; */
+    /* background-color: #2B2C2F; */
+     background-color: #282c34;
+}
+/*----------------------------
+        CUSTOM SCROLLBAR
+------------------------------*/
+::-webkit-scrollbar{
+    width: 10px;
+    height: 7px;
+}
+::-webkit-scrollbar-track{
+    background-color: #fff;
+}
+::-webkit-scrollbar-thumb{
+    border-radius: 6px;
+    background-color: #DBDBDB;
+}
+::-webkit-scrollbar-thumb:hover{
+    background-color: #666;
+}
+
+
+/*--------------------------
+        CONTAINER
+----------------------------*/
+.container {
+    max-width: 1200px;
+    margin: 0px auto;
+    width: 100%;
+    padding: 20px;
+ box-shadow: 0 6px 20px 0px rgba(51, 51, 51, 0.17);
+ -webkit-filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
+ filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
+}
+.home__btn{
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+    border-radius: 3px;
+    color: #000;
+    background-color: #e2f3f5;
+    padding: 8px 12px;
+}
+.header__title{
+   text-align: center;
+   font-size:40px;
+   font-weight: 700;
+   letter-spacing: 0.3px;
+   color: #fff;
+   margin-top: 2rem;
+}
+.flex{
+    display: flex;
+    flex-wrap: wrap;
+}
+.poster img{
+    width: 220px;
+    height: 280px;
+    margin: 0 20px 0 0;
+    border-radius: 6px;
+    background-color: #161D2D;
+    margin-right: 20px;
+    object-fit: cover;
+}
+
+.details .list{
+    list-style: none;
+}
+.details .list .item{
+    margin-bottom: .8rem;
+    color: #fff;
+}
+strong{
+    color: #3d5af1;
+}
+.box h2{
+    color: #3d5af1;
+}
+.box p{
+    width: 100%;
+    color: #fff;
+    margin-bottom: 1rem;
+}
+.box a{
+    padding: 12px 16px;
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: none;
+    color: #fff;
+    background-color: crimson;
+    border-radius: 3px;
+}
+.box a:nth-child(even){
+    background-color: rgb(62, 190, 62);
+}
+
+.season_title {
+    margin: 20px 0 0px 0;
+    font-size: 30px;
+    font-weight: 700;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+}
+#episode {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.season_container{
+    background-color: #fff;
+    margin: 20px;
+    text-align: center;
+    border-radius: 3px;
+}
+.season_container img{
+    width: 170px;
+    height: 250px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    background-color: #161D2D;
+}
+.season_container p {
+    font-size: 16px;
+    font-weight: 500;
+
+}
+
+.container h5 {
+   font-size: 30px;
+   font-weight: 700;
+   color: #fff;
+   text-align: center;
+   text-transform: uppercase;
+    margin: 30px 0;
+}
+#movie__video,
+#trending__video {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+}
+iframe{
+    width: 500px;
+    margin: 20px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    border-radius: 3px;
+    background-color: #161D2D;
+}
+.ytp-error-icon-container {
+    display: none;
+}

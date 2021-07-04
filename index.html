@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie App</title>
+    <!-- ICON -->
+    <link rel="shortcut icon" href="assets/icon/favicon.ico" type="image/x-icon">
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- FONTAWESOME -->
+    <link rel="stylesheet" href="assets/font/css/all.css">
+</head>
+<body>
+
+
+    <!-- NAVBAR -->
+    <div class="nav">
+        <div class="flex__container">
+            <div class="logo">
+                <a href="index.html"><img src="assets/img/logo.png" alt=""></a>
+            </div>
+            <div class="login">
+                <a href="#" class="login__btn" onclick="toggle();">Login &nbsp;<i class="fas fa-user"></i></a>
+                <a href="#" class="user__name" onclick="openToggle();"></a>
+                <form id="forms" class="forms">
+                    <input type="text" id="searchFilter" placeholder="Search for a movies, tv show....." required>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- HEADER -->
+    <div class="header">
+        <div class="content">
+            <h1>Welcome.</h1>
+            <p>Millions of movies, TV show and people to discover. Explore now.</p>
+            <form id="form" class="form">
+                <input type="text" id="filter" placeholder="Search for a movies, tv show....." required>
+                <button type="submit">Search</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- CONTAINER -->
+    <div class="container">
+       <div class="upcoming">
+            <h2 class="head__title">popular tv shows</h2>
+            <div class="box upcoming">
+                <div id="popularTVshow"></div>
+            </div>
+       </div>
+        <div class="popular">
+            <h2 class="head__title">popular movies</h2>
+            <div class="box popular">
+                <div id="popularMovie"></div>
+            </div>
+        </div>
+        <div class="actor">
+            <h2 class="head__title">popular</h2>
+            <div class="box actor">
+                <div id="popular"></div>
+            </div>
+        </div>
+        <div class="trending">
+            <h2 class="head__title">Trending</h2>
+            <div class="box trending">
+                <div id="trending" class="your-class"></div>
+            </div>
+        </div>
+        <div id="searchResult"></div>
+    </div>
+
+
+    <!-- LOGIN -->
+    <div class="login__container">
+        <div class="login__box">
+            <i class="fas fa-times" onclick="toggle();"></i>
+            <div class="login__title">Login</div>
+            <form class="login__form" id="loginFormSubmit">
+                <label>Username <span>*</span></label>
+                <input type="text" placeholder="Name..." id="email"  required><br>
+                <label>Password <span>*</span></label>
+                <input type="password" placeholder="-----"><br>
+                <button type="submit" class="login__btn">Login</button>
+            </form>
+        </div>
+    </div>
+
+
+    <!-- USER PROFILE -->
+    <div class="user__container">
+        <div class="user_box">
+            <div onclick="logout();" id="logout">logout</div>
+        </div>
+    </div>
+
+   
+    <!-- SCRIPT -->
+    <script src="script.js"></script>
+    
+    
+</body>
+</html>
