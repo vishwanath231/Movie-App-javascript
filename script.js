@@ -8,44 +8,11 @@ function displayValue(e){
     e.preventDefault();
 
     var filterName = document.getElementById("filter");
-    document.querySelector(".popular").style.display = "none";
-    document.querySelector(".upcoming").style.display = "none";
-    document.querySelector(".actor").style.display = "none";
-    document.querySelector(".trending").style.display = "none";
-    
-    fetch(` http://www.omdbapi.com/?s=${filterName.value}&apikey=dda54285`)
-    .then((res) => res.json())
-    .then((response)=> {
 
-        console.log(response);
-        
-        document.querySelector(".header").style.display = "none";
-        document.querySelector(".login__btn").style.display = "none";
-        document.querySelector(".forms").style.display = "block";
-        document.querySelector(".user__name").style.display = "none";
-        document.querySelector(".user__container").style.display = "none";
-        document.querySelector("#searchResult").style.margin = "100px 20px 20px 20px";
+    localStorage.setItem("searchValue",filterName.value);
 
+    window.location = 'searchResult.html';
 
-        let movies = response.Search;
-        let output = '';
-        
-        movies.forEach(movie => {
-            
-            output += `
-            <div class="movieBx space">
-                <a onclick="searchSelected('${movie.imdbID}')" class="movie_container" href="#">
-                    <img src="${movie.Poster}" alt="Poster">
-                </a>
-                <div class="popular__names">${movie.Title}</div>
-            </div>
-             
-            `;
-        });
-        document.getElementById("searchResult").innerHTML = output;
-        
-        filterName.value = "";
-    })
 }
 
 
@@ -205,39 +172,7 @@ function getTrending(url){
 
 
 
-// NAVBAR SEARCH FORM
-var forms = document.getElementById("forms");
-forms.addEventListener("submit",displayResult);
 
-function displayResult(e){
-    e.preventDefault();
-
-    var filterName = document.getElementById("searchFilter");
-
-    fetch(` http://www.omdbapi.com/?s=${filterName.value}&apikey=dda54285`)
-    .then((res) => res.json())
-    .then((response)=> {
-        
-        let movies = response.Search;
-        let output = '';
-
-        movies.forEach(movie => {
-            
-            output += `
-            <div class="movieBx space">
-                <a onclick="searchSelected('${movie.imdbID}')" class="movie_container" href="#">
-                    <img src="${movie.Poster}" alt="Poster">
-                </a>
-                <div class="popular__names">${movie.Title}</div>
-            </div>
-             
-            `;
-        });
-        document.getElementById("searchResult").innerHTML = output;
-        
-        filterName.value = "";
-    })
-}
 
 
 // STORAGE  => TV SHOW ID
@@ -269,12 +204,7 @@ function trendingSelected(id){
     return false;
 }
 
-// STORAGE  => SERACH MOVIES ID
-function searchSelected(id){
-    sessionStorage.setItem('searchResultID', id);
-    window.location = 'home.html';
-    return false;
-}
+
 
 
 
