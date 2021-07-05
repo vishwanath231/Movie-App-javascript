@@ -50,7 +50,7 @@ function getMovieDetails(data){
             <div class="box">
                 <h2>Overview : </h2>
                 <p>${movie.overview}</p>
-                <a href="http://imdb.com/title/${movie.imdb_id}" target="_blank" class="btn">View IMDB</a>
+                <a href="http://imdb.com/title/${movie.imdb_id}" target="_blank" class="btn">View IMDB</a>&nbsp;&nbsp;
                 <a href="index.html" class="btn">Go Back To Search</a>
             </div>
         `;

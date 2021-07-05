@@ -52,7 +52,7 @@ function getTVshowDetails(data){
             <div class="box">
                 <h2>Overview : </h2>
                 <p>${movie.overview}</p>
-                <a href="index.html" style="background:green;" class="btn">Go Back To Search</a>
+                <a href="index.html" style="background:rgb(62, 190, 62);" class="btn">Go Back To Search</a>
                 <div class="season_title">Season</div>
             </div>
         `;

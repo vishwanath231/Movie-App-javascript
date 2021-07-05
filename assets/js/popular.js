@@ -25,9 +25,9 @@ getMovieDetails(Popular_URL)
                             <li class="item"><strong>Biography : </strong> ${populars.biography}</li>
                         </ul>
                     </div>
-                </div>
+                </div><br>
                 <div class="box">
-                    <a href="index.html" class="btn">Go Back To Search</a>
+                    <a href="index.html" style="background:rgb(62, 190, 62);" class="btn">Go Back To Search</a>
                 </div>
             `;
              

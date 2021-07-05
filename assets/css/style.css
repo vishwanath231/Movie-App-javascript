@@ -157,8 +157,13 @@ body{
     border-radius: 30px;
     padding:12px 12px;
     margin-left: 10px;
-    text-transform: capitalize;
+    text-decoration: none;
 }
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px #fff inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
 .content .form button{
     font-family: "poppins",sans-serif;
     border: none;
@@ -191,6 +196,9 @@ body{
    
     .flex__container {
         margin: 0 .8rem;
+    }
+    ::placeholder{
+        font-size: 15px;
     }
 }
 @media(max-width:475px){
@@ -257,7 +265,8 @@ body{
     /* width: 148.344px; */
     /* height: 196.891px; */
     height: 250px;
-    border-radius: 6px;
+    border-radius: 6px 6px 0 0;
+
 }
 
 .info {
