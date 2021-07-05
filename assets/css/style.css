@@ -43,10 +43,10 @@ body{
     font-family: "poppins",sans-serif;
     text-align: center;
     margin: 0 2rem;
-    padding: 10px 0;
+    padding: 2px 0;
 }
 .flex__container .logo img{
-    width: 60px;
+    width: 85px;
     padding-top: 5px;
 }
 .login{
@@ -59,7 +59,7 @@ body{
     line-height: 30px;
     font-size: 16px;
     font-weight: 500;
-    padding: 2px 5px;
+    padding: 2px 8px;
     border-radius: 3px;
     cursor: pointer;
     text-decoration: none;
@@ -67,21 +67,22 @@ body{
 }
 
 .flex__container .login form input {
-    padding: 7px 10px;
+    padding: 7px 12px;
     outline: none;
     font-family: "poppins",sans-serif;
-    width: 260px;
+    width: 240px;
     font-size: 15px;
     font-weight: 500;
     letter-spacing: 0.3px;
     background: transparent;
     border: none;
     color: aliceblue;
-    border: 2px solid #1f263a;
+    border: 2px solid #1d2336;
     border-radius: 30px;
 }
 .flex__container .login .login__btn {
     background-color: lightblue;
+    /* background-color: #FFC100; */
     text-align: center;
     line-height: 30px;
     font-size: 16px;

@@ -224,7 +224,8 @@ function login(){
     if (localStorage.getItem("userName")) {
         document.querySelector(".login__btn").style.display = "none";
         document.querySelector('.user__name').innerText = localStorage.getItem("userName");  
-        document.querySelector(".user__name").style.backgroundColor= "lightblue";
+        // document.querySelector(".user__name").style.backgroundColor= "lightblue";
+        document.querySelector(".user__name").style.backgroundColor= "#EEB818";
     }
 }
 login();
