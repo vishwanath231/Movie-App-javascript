@@ -247,6 +247,7 @@ function logout(){
     document.querySelector(".login__btn").style.display = "block";
     document.querySelector(".user__name").style.display = "none";
     document.querySelector(".user__container").style.display = "none";
+    location.reload();
 }
 
 

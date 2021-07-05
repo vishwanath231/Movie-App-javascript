@@ -43,7 +43,7 @@ body{
     font-family: "poppins",sans-serif;
     text-align: center;
     margin: 0 2rem;
-    padding: 2px 0;
+    padding: 6px 0;
 }
 .flex__container .logo img{
     width: 85px;
@@ -85,6 +85,7 @@ body{
     /* background-color: #FFC100; */
     text-align: center;
     line-height: 30px;
+    width: 80px;
     font-size: 16px;
     font-weight: 500;
     padding: 2px 5px;
@@ -93,8 +94,9 @@ body{
     text-decoration: none;
     color: #000;
     margin-top: 0px;
-    margin-left: 8px;
+    margin-right: -13px;
 }
+
 
 
 /*------------------------
@@ -406,6 +408,12 @@ input:-webkit-autofill {
    width: 100px;
    height: 30px;
    
+}
+@media(max-width:600px){
+    .user__container{
+        top: 55px;
+        right: 10px;
+    }
 }
 .user__container.active{
     z-index: 99999999;
