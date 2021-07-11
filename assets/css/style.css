@@ -404,10 +404,7 @@ input:-webkit-autofill {
    right: 31px;
    background-color: #fff;
    border-radius: 3px;
-   padding: 2px 5px;
-   width: 100px;
-   height: 30px;
-   
+   padding: 5px  7px 8px 7px;
 }
 @media(max-width:600px){
     .user__container{
